@@ -48,4 +48,4 @@ RUN \
 RUN git config --global --add safe.directory "*"
 
 EXPOSE 7680
-CMD ["node", "server.js", "--port", "7680", "--whitelistMode", "false", "--listen", "true", "--basicAuthMode", "false"]
+CMD ["node", "--max-old-space-size=400", "server.js", "--port", "7680", "--whitelistMode", "false", "--listen", "true"]
